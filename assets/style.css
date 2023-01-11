@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-rows: [header-start] 50px [header-end] 150px [footer-start] 70px [footer-end] ;
+    grid-template-columns: [main-start] 300px [main-end] 50px [aside-end];
+    border: 1px solid red;
+}
+  
+  .header {
+    grid-row: header-start / header-end ;
+    grid-column: main-start / aside-end;
+    border: 1px solid red;
+  }
+  
+  .main{
+    grid-row: header-end / footer-start;
+    grid-column: main-start / main-end;
+    border: 1px solid red;
+  }
+  .aside{
+    grid-row: header-end / footer-start;
+    grid-column: main-end / aside-end;
+    border: 1px solid red;
+  }
+  .footer{
+    grid-row: footer-start / footer-end;
+    grid-column: main-start / aside-end;
+    border: 1px solid red;
+  }
